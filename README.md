@@ -33,9 +33,13 @@ Programa el segundo método.
 ## Preparación
 Utiliza los proyectos que tú hayas creado en clase o la siguiente plantilla:
 ```
-   git clone https://github.com/srlopez/Examen2EVPruebasUnitarias2Base.git
-   cd Examen2EVPruebasUnitarias2Base
+   git clone https://github.com/srlopez/Examen2EVPruebasUnitarias2.git
+   cd Examen2EVPruebasUnitarias2/ParejasTest
+   dotnet restore
+   cd ..
    rd /q/s .git
+   code .
+   
 ```
 Los datos proporcionados en ella, son orientativos y para que los adaptes a tu desarrollo.  
 Ejecutando en Windows los comandos anteriores, obtienes dos proyectos, uno del `Sistema` y otro de `pruebas unitarias` preparado para los tests. El último comando borra cualquier traza del origen en github, para que tú puedas realizar los necesarios para subirlo a al repositorio que crees para la entrega.  
