@@ -30,9 +30,9 @@ namespace Parejas
         public bool AdmitenDescendencia(Persona a, Persona b)
         {
             if (a.Sexo == b.Sexo) return false;
-            if (Math.Abs(a.Edad - b.Edad) > 12) return false;
-            if (Math.Abs(a.Rango - b.Rango) > 1) return false;
-            return true;
+            if (Math.Abs(a.Rango - b.Rango) <2) return true;
+            if (Math.Abs(a.Edad - b.Edad) <= 12) return true;
+            return false;
         }
 
         public List<(Persona, Persona)> PosibleParejas(List<Persona> personas)
@@ -44,6 +44,7 @@ namespace Parejas
                 {
                     if (AdmitenDescendencia(personas[i], personas[j]))
                     {
+                        // Coloco a los hombres en la primera posición de la tupla
                         if (personas[i].Sexo == Sexo.H)
                             parejas.Add((personas[i], personas[j]));
                         else
